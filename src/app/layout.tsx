@@ -1,16 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import Header from "@/components/Header/Header";
+import { openSans } from "@/utils/fonts";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,9 +16,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${openSans.className} antialiased min-h-screen flex flex-col font-[family-name:var(--font-geist-sans)] border border-[10px] border-indigo-900 bg-slate-300`}
       >
-        {children}
+        <Header appName="Aimee App" />
+        <main className="flex-1 p-24">{children}</main>
+        <footer className="p-5 text-center">
+          Aimee Tacchi App &copy; 2024
+        </footer>
       </body>
     </html>
   );
