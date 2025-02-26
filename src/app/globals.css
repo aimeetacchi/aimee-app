@@ -2,9 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
-@media (prefers-color-scheme: dark) {
+body {
+	font-family: Arial, Helvetica, sans-serif;
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-weight: 500;
+}
+
+h1 {
+	font-size: 2.5rem;
+	color: #056deb;
+}
+h2 {
+	font-size: 1.875rem;
+	color: #056deb;
+}
+
+h3 {
+	font-size: 1.5rem;
+	color: #056deb;
+}
+
+h4 {
+	font-size: 1.25rem;
+	color: #056deb;
+}
+
+h5 {
+	font-size: 1rem;
+}
+
+h6 {
+	font-size: 0.8rem;
 }
