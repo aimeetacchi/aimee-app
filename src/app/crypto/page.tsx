@@ -1,5 +1,3 @@
-import React from "react";
-
 export default async function CryptoPage() {
 	const options = {
 		method: "GET",
